@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NatGeo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fhH-3g-T8c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="e00-d4-yIl">
+                                    <size key="itemSize" width="414" height="896"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PagerCell" id="7f0-SP-fpm" customClass="PagerCell" customModule="NatGeo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tur-sO-291">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIM-ED-FPa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="896" id="7Tq-2Y-aBk"/>
+                                                        <constraint firstAttribute="width" constant="414" id="WRb-lV-VNq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fake trees look good, but fake trees can't bear fruit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt6-Fz-O2s">
+                                                    <rect key="frame" x="20" y="596" width="374" height="57.5"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="26"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holly Furtick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot4-p5-AlI">
+                                                    <rect key="frame" x="20" y="661.5" width="89.5" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rIM-ED-FPa" secondAttribute="trailing" id="3tH-Ap-JCm"/>
+                                                <constraint firstItem="gt6-Fz-O2s" firstAttribute="top" secondItem="rIM-ED-FPa" secondAttribute="bottom" constant="-300" id="PJr-6m-I7E"/>
+                                                <constraint firstAttribute="trailing" secondItem="gt6-Fz-O2s" secondAttribute="trailing" constant="20" id="SzD-tX-XOW"/>
+                                                <constraint firstItem="ot4-p5-AlI" firstAttribute="leading" secondItem="gt6-Fz-O2s" secondAttribute="leading" id="Z8d-IF-fL0"/>
+                                                <constraint firstItem="rIM-ED-FPa" firstAttribute="leading" secondItem="tur-sO-291" secondAttribute="leading" id="cWS-Ky-fzG"/>
+                                                <constraint firstItem="gt6-Fz-O2s" firstAttribute="leading" secondItem="tur-sO-291" secondAttribute="leading" constant="20" id="ix8-IF-oVn"/>
+                                                <constraint firstItem="rIM-ED-FPa" firstAttribute="top" secondItem="tur-sO-291" secondAttribute="top" id="o9z-LQ-bTN"/>
+                                                <constraint firstItem="ot4-p5-AlI" firstAttribute="top" secondItem="gt6-Fz-O2s" secondAttribute="bottom" constant="8" id="qDs-Yd-wKd"/>
+                                                <constraint firstAttribute="bottom" secondItem="rIM-ED-FPa" secondAttribute="bottom" id="sVO-fm-jtp"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="896"/>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="gt6-Fz-O2s" id="Awp-P3-jbD"/>
+                                            <outlet property="messenger" destination="ot4-p5-AlI" id="eyV-cN-Ilj"/>
+                                            <outlet property="pageImage" destination="rIM-ED-FPa" id="Ech-N6-Oj4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="meZ-8N-gaD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VSZ-OJ-uSW"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wmj-Ey-E14">
+                                <rect key="frame" x="259" y="746" width="135" height="28"/>
+                                <color key="pageIndicatorTintColor" red="0.87843137250000003" green="0.8862745098" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.98431372549999996" green="0.83529411760000005" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61v-gt-Xgc">
+                                <rect key="frame" x="259" y="782" width="135" height="60"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.83529411764705885" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="k2J-W2-LnX"/>
+                                    <constraint firstAttribute="width" constant="135" id="nKH-l9-5ad"/>
+                                </constraints>
+                                <color key="tintColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="arrow.right" catalog="system">
+                                    <color key="titleColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="goNext" destination="BYZ-38-t0r" eventType="touchUpInside" id="Twk-mF-KkQ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natgeologo" translatesAutoresizingMaskIntoConstraints="NO" id="h2i-M8-wQn">
+                                <rect key="frame" x="147" y="80" width="120" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8Dc-pE-Bca"/>
+                                    <constraint firstAttribute="width" constant="120" id="RI5-4G-ElK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wmj-Ey-E14" firstAttribute="trailing" secondItem="61v-gt-Xgc" secondAttribute="trailing" id="Ixl-0F-clb"/>
+                            <constraint firstItem="fhH-3g-T8c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NeX-z1-qEe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="61v-gt-Xgc" secondAttribute="trailing" constant="20" id="QcH-5R-FJt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="61v-gt-Xgc" secondAttribute="bottom" constant="20" id="VdS-Rx-mzd"/>
+                            <constraint firstItem="h2i-M8-wQn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="ami-Au-OPv"/>
+                            <constraint firstItem="wmj-Ey-E14" firstAttribute="leading" secondItem="61v-gt-Xgc" secondAttribute="leading" id="d6d-wN-Fbf"/>
+                            <constraint firstItem="fhH-3g-T8c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iVn-jD-MSe"/>
+                            <constraint firstItem="h2i-M8-wQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQ3-b5-wty"/>
+                            <constraint firstItem="61v-gt-Xgc" firstAttribute="top" secondItem="wmj-Ey-E14" secondAttribute="bottom" constant="8" id="sn4-YZ-ZFn"/>
+                            <constraint firstAttribute="bottom" secondItem="fhH-3g-T8c" secondAttribute="bottom" id="vQf-xg-teQ"/>
+                            <constraint firstItem="fhH-3g-T8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xoC-An-6Dv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="fhH-3g-T8c" id="jxy-2v-xv4"/>
+                        <outlet property="nextButton" destination="61v-gt-Xgc" id="Pqh-lE-IvY"/>
+                        <outlet property="pageControl" destination="wmj-Ey-E14" id="i32-3i-JNL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="natgeologo" width="591" height="854"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
